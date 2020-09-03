@@ -36,9 +36,9 @@ int main(){
         */
         
         if(num1 == 0 || num2 == 0) 
-        	cout << "1\n";
-		else 
-			cout << (calcularFatorial(num1) + calcularFatorial(num2)) << endl;
+        	cout << "2\n";
+	else 
+		cout << (calcularFatorial(num1) + calcularFatorial(num2)) << endl;
 		
         
         /* Aqui, a gente poderia imprimir o resultado diretamente nos ifs, que foi oq eu fiz. Dessa forma, 
@@ -71,5 +71,5 @@ long long int calcularFatorial(int n){
 
 // Implementação com função anterior de forma recursiva
 long long int fatorial(int n) {
-	return n == 1 ? n : n * fatorial(n - 1);
+	return n <= 1 ? 1 : n * fatorial(n - 1);
 }
