@@ -19,15 +19,15 @@ int main(){
 }
 
 int numPrimo(long long int n){
-    int i, root;
+    int i, raiz;
     if (n<2)
         return 0;
     if (n==2)
         return 1;
     if (n%2==0)
         return 0;
-    root = sqrt(n);
-    for (i = 3; i <= root; i+=2)
+    raiz = sqrt(n);
+    for (i = 3; i <= raiz; i+=2)
         if (n%i == 0)
             return 0;
     return 1;            
