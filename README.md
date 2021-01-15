@@ -1,2 +1,2 @@
-# questoes-URI
-Meus exercícios URI 
+# Questões resolvidas URI
+Meus exercícios solucionados na plataforma URI
