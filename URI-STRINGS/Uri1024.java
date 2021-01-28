@@ -13,9 +13,9 @@ public class Uri1024 {
 
             int[] listaUnicode = extrairUnicode(entrada);
 
-            listaUnicode = primeiroPasso(listaUnicode);
+            primeiroPasso(listaUnicode);
             listaUnicode = reverse(listaUnicode);
-            listaUnicode = terceiroPasso(listaUnicode);
+            terceiroPasso(listaUnicode);
 
             System.out.println(decode(listaUnicode));
             i--;
@@ -35,7 +35,7 @@ public class Uri1024 {
         return strFinal;
     }
 
-    private static int[] primeiroPasso(int[] lista){
+    private static void primeiroPasso(int[] lista){
         for(int i = 0; i < lista.length; i++){
             if(lista[i] >= 65 && lista[i] <= 90 ||
                     lista[i] >= 97 && lista[i] <= 122){
@@ -62,13 +62,12 @@ public class Uri1024 {
         }
         return lista;
     }
-    private static int[] terceiroPasso(int[] lista){
+    private static void terceiroPasso(int[] lista){
 
         for (int i = lista.length/2; i < lista.length; i++){
             if(lista[i] >= 32 && lista[i] <= 176){
                 lista[i] -= 1;
             }
         }
-        return lista;
     }
 }
