@@ -22,17 +22,21 @@ public class Uri1024 {
         }
 
     }
+
     private static void clearBuffer(Scanner scanner) {
         if (scanner.hasNextLine()) {
             scanner.nextLine();
         }
     }
-    private static String decode(int[] lista){
-        StringBuilder strFinal = new StringBuilder();
-        for (int j : lista) {
-            strFinal.append((char) j);
+
+    private static int[] extrairUnicode(String texto){
+        int[] lista = new int[texto.length()];
+
+        for (int i = 0; i < texto.length(); i++){
+            lista[i] = texto.codePointAt(i);
         }
-        return strFinal.toString();
+
+        return lista;
     }
 
     private static void primeiroPasso(int[] lista){
@@ -44,6 +48,7 @@ public class Uri1024 {
         }
         return lista;
     }
+
     private static int[] reverse(int[] lista){
 
         int tamanho = lista.length;
@@ -55,13 +60,7 @@ public class Uri1024 {
         }
         return arrayAux;
     }
-    private static int[] extrairUnicode(String texto){
-        int[] lista = new int[texto.length()];
-        for (int i = 0; i < texto.length(); i++){
-            lista[i] = texto.codePointAt(i);
-        }
-        return lista;
-    }
+
     private static void terceiroPasso(int[] lista){
 
         for (int i = lista.length/2; i < lista.length; i++){
@@ -69,5 +68,13 @@ public class Uri1024 {
                 lista[i] -= 1;
             }
         }
+    }
+
+    private static String decode(int[] lista){
+        StringBuilder strFinal = new StringBuilder();
+        for (int j : lista) {
+            strFinal.append((char) j);
+        }
+        return strFinal.toString();
     }
 }
