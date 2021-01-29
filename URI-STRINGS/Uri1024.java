@@ -28,11 +28,11 @@ public class Uri1024 {
         }
     }
     private static String decode(int[] lista){
-        String strFinal = "";
-        for (int i = 0; i < lista.length; i++){
-            strFinal += (char) lista[i];
+        StringBuilder strFinal = new StringBuilder();
+        for (int j : lista) {
+            strFinal.append((char) j);
         }
-        return strFinal;
+        return strFinal.toString();
     }
 
     private static void primeiroPasso(int[] lista){
