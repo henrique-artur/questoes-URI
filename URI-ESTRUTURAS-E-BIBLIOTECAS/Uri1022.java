@@ -1,3 +1,5 @@
+package com.tutu.uri.resolvido;
+
 import java.util.Scanner;
 
 public class Uri1022 {

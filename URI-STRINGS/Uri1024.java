@@ -46,7 +46,6 @@ public class Uri1024 {
                 lista[i] += 3;
             }
         }
-        return lista;
     }
 
     private static int[] reverse(int[] lista){
